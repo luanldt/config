@@ -17,8 +17,9 @@ Plug 'vim-airline/vim-airline-themes'
 " VIM Indent line: https://github.com/yggdroot/indentline
 Plug 'Yggdroot/indentLine'
 
-" VIM Gitgutter
-Plug 'airblade/vim-gitgutter'	
+Plug 'tpope/vim-fugitive'
+Plug 'rbong/vim-flog'
+Plug 'mhinz/vim-signify'
 
 " Emmet vim
 Plug 'mattn/emmet-vim'
@@ -56,6 +57,7 @@ set relativenumber
 set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
 set list
 set encoding=UTF-8
+set updatetime=100
 
 " Turn backup off, since most stuff is in SVN, git etc. anyway...
 set nobackup
@@ -106,6 +108,12 @@ let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#formatter = 'default'
+let g:airline#extensions#hunks#enabled = 1
+let g:airline#extensions#branch#enabled = 1
+" Check airline_symbols does not exist then remove airline symbols
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
 """ }}} End Vim Airline
 
 """ 4. NERDTree Config {{{
@@ -170,4 +178,8 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 """ }}} End Syntastic
+
+""" 7. VIM Signify {{{
+let g:updatetime=100
+""" }}} End VIM Signify
 
