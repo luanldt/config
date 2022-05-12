@@ -1,10 +1,17 @@
 let s:fontsize = 9
+
+if exists('g:GuiLoaded')
+  GuiTabline 0
+  GuiPopupmenu 0
+  GuiLinespace 1.3
+  :execute "GuiFont! MonoLisa\ NF:h" . s:fontsize
+endif
+
 function! AdjustFontSize(amount)
   let s:fontsize = s:fontsize + a:amount
-  :execute "GuiFont! MonoLisa:h" . s:fontsize
 endfunction
 
-:call AdjustFontSize(-1)
+" :call AdjustFontSize(-1)
 
 " In normal mode, keep Ctrl + ScrollUp increase the font
 noremap <C-ScrollWheelUp> :call AdjustFontSize(1)<CR>

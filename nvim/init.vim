@@ -33,9 +33,24 @@ Plug 'vim-syntastic/syntastic'
 " Vim Prettier
 Plug 'prettier/vim-prettier', { 'do': 'npm install' } " Or npm install, if you prefer npm
 
+" Vim ddc
+Plug 'Shougo/ddc.vim'
+Plug 'vim-denops/denops.vim'
+
+" Install your sources
+Plug 'Shougo/ddc-around'
+
+" Install your filters
+Plug 'Shougo/ddc-matcher_head'
+Plug 'Shougo/ddc-sorter_rank'
+
+Plug 'Shougo/pum.vim'
+
+" VIM 
+Plug 'Raimondi/delimitMate'
+
 " Initialize plugin system
 call plug#end()
-
 
 " Load config
 for f in glob(stdpath('config') . '/configs/*.vim', 0, 1)
