@@ -7,6 +7,7 @@ set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:�
 set list
 set encoding=UTF-8
 set updatetime=100
+set spell
 
 " Turn backup off, since most stuff is in SVN, git etc. anyway...
 set nobackup
@@ -20,7 +21,7 @@ set smarttab
 " 1 tab == 2 spaces
 set shiftwidth=2
 set tabstop=2
-" Linebreak on 500 characters
+" Line break on 500 characters
 set lbr
 set tw=500
 " Auto indent
@@ -29,14 +30,14 @@ set ai
 set si 
 " Wrap lines
 set wrap 
-" Hightlight current line 
+" Highlight current line 
 set cursorline
-" Set auto change dir with nerdtree
+" Set auto change directory with the NerdTree
 set autochdir
-" Disable signcolumn in nerdtree
+" Disable sign column in nerdtree
 autocmd FileType nerdtree setlocal signcolumn=no
 " Set background is dark
 set background=dark
-" Enable syntax hightlight
+" Enable syntax highlight
 syntax on
 """ }}} End UI
