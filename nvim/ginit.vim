@@ -1,14 +1,16 @@
 let s:fontsize = 9
+let s:fontname = "Consolas"
 
 if exists('g:GuiLoaded')
   GuiTabline 0
   GuiPopupmenu 0
   GuiLinespace 1.3
-  :execute "GuiFont! MonoLisa\ NF:h" . s:fontsize
+  :execute "GuiFont! ". s:fontname .":h" . s:fontsize
 endif
 
 function! AdjustFontSize(amount)
   let s:fontsize = s:fontsize + a:amount
+  :execute "GuiFont! ". s:fontname .":h" . s:fontsize
 endfunction
 
 " :call AdjustFontSize(-1)
